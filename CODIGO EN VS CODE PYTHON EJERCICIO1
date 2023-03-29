@@ -1,1 +1,19 @@
 
+import math
+
+hora_inicial = int(input("Ingrese la hora inicial: "))
+minutos_inicial = int(input("Ingrese los minutos iniciales: "))
+duracion_evento = int(input("Ingrese la duración del evento en minutos: "))
+
+minutos_final = minutos_inicial + duracion_evento
+if minutos_final >= 60:
+    minutos_final -= 60
+    hora_inicial += 1
+
+hora_final = hora_inicial
+if hora_final >= 24:
+    hora_final -= 24
+
+minutos_final = round(minutos_final)
+
+print("La hora de finalización es: ", hora_final, ":", minutos_final)
