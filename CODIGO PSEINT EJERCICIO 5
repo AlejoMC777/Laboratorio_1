@@ -1,1 +1,22 @@
 
+Algoritmo AdivinaElNumeroSecreto
+	
+	Definir numeroSecreto Como Entero;
+	Definir numeroIngresado Como Entero;
+	
+	numeroSecreto <- 7;
+	numeroIngresado <- 0; // Inicializamos la variable numeroIngresado
+	
+	Escribir "¡Bienvenido a Adivina el número secreto!";
+	Escribir "El mago ha elegido un número secreto. Adivina cuál es.";
+	Mientras numeroIngresado <> numeroSecreto Hacer
+		Escribir "Ingresa un número entero:";
+		Leer numeroIngresado;
+		Si numeroIngresado <> numeroSecreto Entonces
+			Escribir "Ja, sa! Estás atrapado en mi ciclo!";
+		Fin Si
+	Fin Mientras
+	
+	Escribir "¡Bien hecho, muggle! ¡Puedes irte libremente!";
+	
+FinAlgoritmo
