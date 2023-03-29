@@ -1,1 +1,13 @@
 
+# Pedir al usuario que ingrese un año
+anio = int(input("Ingrese un año: "))
+
+# Verificar si el año ingresado está dentro del periodo del calendario gregoriano
+if anio < 1582:
+    print("El año ingresado está fuera del periodo del calendario gregoriano.")
+else:
+    # Verificar si el año es bisiesto o común utilizando las reglas dadas
+    if ((anio % 4 == 0) and (anio % 100 != 0)) or (anio % 400 == 0):
+        print("Año bisiesto")
+    else:
+        print("Año común")
