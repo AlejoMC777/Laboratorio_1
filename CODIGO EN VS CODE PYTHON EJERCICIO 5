@@ -1,1 +1,13 @@
 
+numeroSecreto = 7
+numeroIngresado = 0
+
+print("¡Bienvenido a Adivina el número secreto!")
+print("El mago ha elegido un número secreto. Adivina cuál es.")
+
+while numeroIngresado != numeroSecreto:
+    numeroIngresado = int(input("Ingresa un número entero: "))
+    if numeroIngresado != numeroSecreto:
+        print("Ja, sa! Estás atrapado en mi ciclo!")
+        
+print("¡Bien hecho, muggle! ¡Puedes irte libremente!")
