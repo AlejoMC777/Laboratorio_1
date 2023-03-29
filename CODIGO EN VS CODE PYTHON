@@ -1,16 +1,14 @@
-# Definir variables
-ingreso = float(input("Ingrese su ingreso: "))
-impuesto = 0
-
-# Calcular impuesto
-if ingreso <= 85528:
-    impuesto = round((ingreso * 0.18) - 556.02)
-else:
-    impuesto = round(14839.02 + ((ingreso - 85528) * 0.32))
-
-# Ajustar impuesto si es negativo
-if impuesto < 0:
-    impuesto = 0
-
-# Imprimir resultado
-print("El impuesto calculado es:", impuesto)
+def calcular_impuesto():
+    ingreso = float(input("Ingrese el ingreso anual del ciudadano: "))
+    
+    if ingreso <= 85528:
+        impuesto = ingreso * 0.18 - 556.2
+    else:
+        impuesto = 14839.2 + (ingreso - 85528) * 0.32
+        
+    if impuesto < 0:
+        impuesto = 0
+        
+    print("El impuesto calculado es: $", round(impuesto))
+    
+calcular_impuesto()
