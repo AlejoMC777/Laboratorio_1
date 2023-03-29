@@ -1,1 +1,26 @@
 
+Proceso CalcularHoraFinal
+    Definir horaInicial, minutosInicial, duracionEvento, horaFinal, minutosFinal Como Entero ;
+    
+    Escribir "Ingrese la hora inicial:";
+    Leer horaInicial;
+    Escribir "Ingrese los minutos iniciales:";
+    Leer minutosInicial;
+    Escribir "Ingrese la duración del evento en minutos:";
+    Leer duracionEvento;
+    
+    minutosFinal <- minutosInicial + duracionEvento;
+    Si minutosFinal >= 60 Entonces
+        minutosFinal <- minutosFinal - 60;
+        horaInicial <- horaInicial + 1;
+    FinSi
+    
+    horaFinal <- horaInicial;
+    Si horaFinal >= 24 Entonces
+        horaFinal <- horaFinal - 24;
+    FinSi
+    
+    minutosFinal <- Round(minutosFinal);
+    
+    Escribir "La hora de finalización es: ", horaFinal, ":", minutosFinal;
+FinProceso
