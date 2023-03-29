@@ -1,19 +1,17 @@
-	Proceso Calcular_Impuesto
-		Definir ingreso, impuesto como Real;
-		
-		Escribir "Ingrese su ingreso: ";
-		Leer ingreso;
-		
-		Si ingreso <= 85528 Entonces
-			impuesto <-- Redondear((ingreso * 0.18) - 556.02);
-		SiNo
-			impuesto <-- Redondear(14839.02 + ((ingreso - 85528) * 0.32));
-		FinSi
-		
-		Si impuesto < 0 Entonces
-			impuesto <-- 0;
-		FinSi
-		
-		Escribir "El impuesto calculado es: ", impuesto;
+Proceso calcular_impuesto
+	Definir ingreso, impuesto Como Real;
+	Escribir "Ingrese el ingreso anual del ciudadano:";
+	Leer ingreso;
+	
+	Si ingreso <= 85528 Entonces
+		impuesto <-- ingreso * 0.18 - 556.2;
+	SiNo
+		impuesto <-- 14839.2 + (ingreso - 85528) * 0.32;
+	FinSi
+	
+	Si impuesto < 0 Entonces
+		impuesto <-- 0;
+	FinSi
+	
+	Escribir "El impuesto calculado es: $", round (impuesto);
 FinProceso
-
